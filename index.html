@@ -5,37 +5,107 @@
     <title>Entrelinhas - Biblioteca Pessoal</title>
 </head>
 <body>
-    <h1>Entrelinhas</h1>
-    <p>Um espaço pessoal para organizar leituras e registrar opiniões sobre livros e suas adaptações.</p>
+    <header>
+        <h1>Entrelinhas</h1>
+        <p>Um espaço pessoal para organizar leituras e registrar opiniões sobre livros e suas adaptações.</p>
+    </header>
+    <main>
+        <section id="leituras">
+            <h2>Minhas Leituras</h2>
+            
+            <ul>
+                <li>Lord of The Mysteries</li>
+                <li>Omniscient Reader's Viewpoint</li>
+                <li>SSS Class Revival Hunter</li>
+            </ul>
 
-    <ul>
-        <li>Lord of The Mysteries</li>
-        <li>Omniscient Reader's Viewpoint</li>
-        <li>SSS Class Revival Hunter</li>
-    </ul>
+            <table border="1">
+                <tr>
+                    <th>Obra</th>
+                    <th>Avaliação</th>
+                </tr>
+                <tr>
+                    <td>Omniscient Reader's Viewpoint</td>
+                    <td>5 estrelas</td>
+                </tr>
+                <tr>
+                    <td>SSS Class Revival Hunter</td>
+                    <td>5 estrelas</td>
+                </tr>
+                <tr>
+                    <td>Lord of The Mysteries</td>
+                    <td>5 estrelas</td>
+                </tr>
+            </table>
 
-    <table border="1">
-        <tr>
-            <td>Omniscient Reader's Viewpoint</td>
-            <td>5 estrelas</td>
-        </tr>
-        <tr>
-            <td>SSS Class Revival Hunter</td>
-            <td>5 estrelas</td>
-        </tr>
-        <tr>
-            <td>Lord of The Mysteries</td>
-            <td>5 Estrelas</td>
-            <br><br>
-        </tr>
-    </table>
+            <br>
+            <img src="assets/images/ORV_Cover.jpg" alt="Capa de Omniscient Reader's Viewpoint">
+            <img src="assets/images/SSSCRH_Cover.jpg" alt="Capa de SSS Class Revival Hunter">
+            <img src="assets/images/TLOTM_Cover.jpg" alt="Capa de Lord of The Mysteries"> 
+        </section>
 
-    <br>
-    <a href="https://www.goodreads.com" target="_blank" rel="noopener noreferrer">Explorar o Goodreads</a>
+        <hr>
 
-    <br><br>
-    <img src="assets/images/TLOTM_Cover.jpg" alt="Capa do livro"> 
-    <img src="assets/images/ORV_Cover.jpg" alt="Capa do livro">
-    <img src="assets/images/SSSCRH_Cover.jpg" alt="Capa do livro">
+        <section id="nova-resenha">
+            <h2>Registrar Nova Resenha</h2>
+            
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>Dados da Obra</legend>
+
+                    <label for="titulo">Título da obra:</label>
+                    <input type="text" id="titulo" name="titulo" required>
+                    <br><br>
+
+                    <label for="status">Status da Leitura:</label>
+                    <select id="status" name="status">
+                        <option value="lendo">Lendo</option>
+                        <option value="lido">Lido</option>
+                        <option value="quero-ler">Quero Ler</option>
+                        <option value="abandonado">Abandonado</option>
+                        <option value="pausado">Pausado</option>
+                    </select>
+                    <br><br>
+
+                    <p>Formato da Obra:</p>
+                    <input type="radio" id="formato-livro" name="formato" value="livro">
+                    <label for="formato-livro">Livro Físico</label>
+
+                    <input type="radio" id="formato-webnovel" name="formato" value="webnovel">
+                    <label for="formato-webnovel">Web Novel</label>
+
+                    <input type="radio" id="formato-manhwa" name="formato" value="manhwa">
+                    <label for="formato-manhwa">Manhwa / Mangá</label>
+                    <br><br>
+
+                    <label for="nota">Sua Nota (1 a 5):</label>
+                    <input type="number" id="nota" name="nota" min="1" max="5" required>
+                    <br><br>
+
+                    <label for="data-conclusao">Data de Conclusão da Leitura:</label>
+                    <input type="date" id="data-conclusao" name="data-conclusao">
+                    <br><br>
+
+                    <label for="texto-resenha">Sua Resenha:</label>
+                    <br>
+                    <textarea id="texto-resenha" name="texto-resenha" rows="6" cols="50" placeholder="Escreva o que você achou da obra..."></textarea>
+                    <br><br>
+
+                </fieldset>
+                
+                <button type="submit">Salvar Resenha</button>
+            </form>
+        </section>
+
+    </main>
+
+    
+
+    <footer>
+        <br>
+        <a href="https://www.goodreads.com" target="_blank" rel="noopener noreferrer">Explorar o Goodreads</a>
+        <p>&copy; 2026 Entrelinhas - Desenvolvido por Pedro Fernandes.</p>
+    </footer>
+
 </body>
 </html>
