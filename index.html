@@ -1,117 +1,110 @@
+<!--
+Coisas a serem feitas neste código:
+
+1- remover os <br> usados apenas para espaçamento entre os elementos e utilizar o CSS para isso (com padding);
+2- definir classes para o header, main, footer e o que mais for necessário;
+3- remover os comandos CSS dos blocos, como o style="text-align: center;" que está no header;
+4- remover os HR que estão sendo usados como separação decorativa e usar CSS para criar isso;
+5- colocar um arquivo válido para o favicon;
+6- colocar links válidos para as páginas da nav do cabeçalho.
+
+Lista de classes:
+
+obras-recentes;
+cabecalho;
+trilha-sonora;
+lista-obras;
+card-obra.
+-->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Entrelinhas - Biblioteca Pessoal</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>📚 PaperLog</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/icons/"> <!--Sem ícone por enquanto-->
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">    
 </head>
+
 <body>
-    <header>
-        <h1>Entrelinhas</h1>
+    <header class="cabecalho" style="text-align: center;">
+        <br>
+        <h1>PaperLog</h1>
+        <h3>Bem vindo à PaperLog!</h3>
+        <h3>Um espaço pessoal para organizar leituras e registrar opiniões sobre livros e suas adaptações.</h3>
+        <hr>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="/pages/bookPage.html">Minhas Leituras</a>
+            <a href="/pages/pesquisar.html">Pesquisar</a>
+            <a href="/pages/foruns.html">Fóruns</a>
+            </nav>
+        <hr>
+    </header>
+
+    <main>
+
         <section class="trilha-sonora">
-            <h2>Música de fundo</h2>
+            <h3>Trilha Sonora</h3>
+            <p>Uma música para acompanhar suas leituras.</p>
   <!-- Justificativa: preload="none" garante que o arquivo de áudio não consuma a franquia de dados do usuário antes que ele decida dar o play. -->
             <audio controls preload="none">
-            <source src="assets/audio/alex-morgan-coffee-shop-peaceful-afternoon-calm-573880.mp3" type="audio/mpeg">
-            <source src="assets/audio/alex-morgan-coffee-shop-peaceful-afternoon-calm-573880.wav" type="audio/wav">
-            <p>Seu navegador não suporta o elemento de áudio. <a href="assets/audio/alex-morgan-coffee-shop-peaceful-afternoon-calm-573880.mp3">Baixe o arquivo de áudio</a>.</p>
+                <source src="assets/audio/alex-morgan-coffee-shop-peaceful-afternoon-calm-573880.mp3"
+                    type="audio/mpeg">
+                <source src="assets/audio/alex-morgan-coffee-shop-peaceful-afternoon-calm-573880.wav"
+                    type="audio/wav">
+                <p>Seu navegador não suporta o elemento de áudio. <a href="assets/audio/alex-morgan-coffee-shop-peaceful-afternoon-calm-573880.mp3">Baixe o arquivo de áudio</a>.</p>
             </audio>
-            </section>
-        <p>Um espaço pessoal para organizar leituras e registrar opiniões sobre livros e suas adaptações.</p>
-    </header>
-    <main>
-        <section id="leituras">
-            <h2>Minhas Leituras</h2>
-            
-            <ul>
-                <li>Lord of The Mysteries</li>
-                <li>Omniscient Reader's Viewpoint</li>
-                <li>SSS Class Revival Hunter</li>
-            </ul>
-
-            <table border="1">
-                <tr>
-                    <th>Obra</th>
-                    <th>Avaliação</th>
-                </tr>
-                <tr>
-                    <td>Omniscient Reader's Viewpoint</td>
-                    <td>5 estrelas</td>
-                </tr>
-                <tr>
-                    <td>SSS Class Revival Hunter</td>
-                    <td>5 estrelas</td>
-                </tr>
-                <tr>
-                    <td>Lord of The Mysteries</td>
-                    <td>5 estrelas</td>
-                </tr>
-            </table>
-
-            <br>
-            <img src="assets/images/ORV_Cover.jpg" alt="Capa de Omniscient Reader's Viewpoint">
-            <img src="assets/images/SSSCRH_Cover.jpg" alt="Capa de SSS Class Revival Hunter">
-            <img src="assets/images/TLOTM_Cover.jpg" alt="Capa de Lord of The Mysteries"> 
         </section>
 
-        <hr>
+    <section class="obras-recentes">
+        
+        <h2>Obras recentes</h2>
 
-        <section id="nova-resenha">
-            <h2>Registrar Nova Resenha</h2>
-            
-            <form action="#" method="POST">
-                <fieldset>
-                    <legend>Dados da Obra</legend>
+        <div class="lista-obras">
 
-                    <label for="titulo">Título da obra:</label>
-                    <input type="text" id="titulo" name="titulo" required>
-                    <br><br>
+            <article class="card-obra">
+                <img src="assets/images/ORV_Cover.jpg"  
+                    alt="Capa da obra Omniscient Reader's Viewpoint">
 
-                    <label for="status">Status da Leitura:</label>
-                    <select id="status" name="status">
-                        <option value="lendo">Lendo</option>
-                        <option value="lido">Lido</option>
-                        <option value="quero-ler">Quero Ler</option>
-                        <option value="abandonado">Abandonado</option>
-                        <option value="pausado">Pausado</option>
-                    </select>
-                    <br><br>
+                <h3>Omniscient Reader's Viewpoint</h3>
+            </article>
 
-                    <p>Formato da Obra:</p>
-                    <input type="radio" id="formato-livro" name="formato" value="livro">
-                    <label for="formato-livro">Livro Físico</label>
+            <article class="card-obra">
+                <img src="assets/images/SSSCSH_Cover.jpg"
+                    alt="Capa da obra SSS Class Suicidal Hunter">
 
-                    <input type="radio" id="formato-webnovel" name="formato" value="webnovel">
-                    <label for="formato-webnovel">Web Novel</label>
+                <h3>SSS Class Suicidal Hunter</h3>
+            </article>
 
-                    <input type="radio" id="formato-manhwa" name="formato" value="manhwa">
-                    <label for="formato-manhwa">Manhwa / Mangá</label>
-                    <br><br>
+            <article class="card-obra">
+                <img src="assets/images/LOTM_Cover.jpg"
+                    alt="Capa da obra Lord of the Mysteries">
 
-                    <label for="nota">Sua Nota (1 a 5):</label>
-                    <input type="number" id="nota" name="nota" min="1" max="5" required>
-                    <br><br>
+                <h3>Lord of the Mysteries</h3>
+            </article>
 
-                    <label for="data-conclusao">Data de Conclusão da Leitura:</label>
-                    <input type="date" id="data-conclusao" name="data-conclusao">
-                    <br><br>
+        </div>
+    </section>
 
-                    <label for="texto-resenha">Sua Resenha:</label>
-                    <br>
-                    <textarea id="texto-resenha" name="texto-resenha" rows="6" cols="50" placeholder="Escreva o que você achou da obra..."></textarea>
-                    <br><br>
-
-                </fieldset>
-                
-                <button type="submit">Salvar Resenha</button>
-            </form>
-        </section>
-
+        
     </main>
 
     <footer>
+        <hr>
         <br>
-        <a href="https://www.goodreads.com" target="_blank" rel="noopener noreferrer">Explorar o Goodreads</a>
-        <p>&copy; 2026 Entrelinhas - Desenvolvido por Pedro Fernandes.</p>
+        <nav style="text-align: center;">
+            <a href="" target="_blank" rel="noopener noreferrer">Sobre Nós</a>
+            <a href="" target="_blank" rel="noopener noreferrer">Copyright</a>
+            <a href="https://www.goodreads.com" target="_blank" rel="noopener noreferrer">Explorar o Goodreads</a> <!--Link para o goodreads apenas por questão de testes.-->
+        </nav>
+        <br>
     </footer>
 
 </body>

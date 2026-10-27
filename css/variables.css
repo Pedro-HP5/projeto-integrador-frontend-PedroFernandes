@@ -1,0 +1,18 @@
+:root {
+    /* Fundos */
+    --cor-fundo: #130D09;
+    --cor-painel: #1E150E;
+    --cor-superficie: #271E19;
+
+    /* Cores de destaque */
+    --cor-cafe: #BC774B;
+    --cor-verde: #689885;
+    --cor-destaque-escuro: #32231A;
+
+    /* Textos */
+    --cor-texto: #EEE2D0;
+    --cor-texto-secundario: #A89D8E;
+
+    /* Bordas */
+    --cor-borda: #3A2D24;
+}
