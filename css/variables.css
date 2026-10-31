@@ -5,6 +5,7 @@
     --cor-superficie: #271E19;
 
     /* Cores de destaque */
+    --cor-dourado: #C6A15B;
     --cor-cafe: #BC774B;
     --cor-verde: #689885;
     --cor-destaque-escuro: #32231A;
@@ -12,6 +13,10 @@
     /* Textos */
     --cor-texto: #EEE2D0;
     --cor-texto-secundario: #A89D8E;
+    
+    --font-logo: "Cinzel Decorative", serif;
+    --font-titulos: "Cinzel", serif;
+    --font-textos: "Lato", sans-serif;
 
     /* Bordas */
     --cor-borda: #3A2D24;
