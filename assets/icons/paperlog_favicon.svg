@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F2C98A"/>
+      <stop offset="0.52" stop-color="#E5B269"/>
+      <stop offset="1" stop-color="#B8833B"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="13" fill="#1A100C" stroke="#8C5C26" stroke-width="2"/>
+  <rect x="6" y="6" width="52" height="52" rx="9" fill="none" stroke="#E5B269" stroke-opacity=".38" stroke-width="1"/>
+  <!-- Bold, simplified PL monogram designed to remain legible at 16px -->
+  <path d="M14 47V17h13.2c8.1 0 12.5 4.1 12.5 11.1S35.3 39 27.2 39h-5.4v8H14zm7.8-14.7h5c3.5 0 5.2-1.8 5.2-5.1s-1.7-5-5.2-5h-5v10.1z" fill="url(#gold)"/>
+  <path d="M38.5 17h7.8v23.1H54V47H38.5V17z" fill="#FDF8ED"/>
+  <path d="M13 51.5h41" stroke="#B8833B" stroke-width="1.5" stroke-linecap="round" opacity=".9"/>
+</svg>
