@@ -69,10 +69,10 @@ h1, h2, h3 {
 
 #site-header p {
     padding-bottom: 3px;
-    font-family: var(--font-titulos);
+    font-family: var(--font-textos);
     font-size: 1.3rem;
 }
-#site-header p#descricaoHeader{
+#site-header p#descricaoHeader{ 
     font-size: 1.2rem;
 }
 
@@ -104,6 +104,8 @@ h1, h2, h3 {
     background-color: var(--cor-painel);
     border-top: 1px solid var(--cor-borda);
     border-bottom: 1px solid var(--cor-borda);
+
+    font-family: var(--font-textos);
 }
 
 
@@ -145,53 +147,229 @@ h1, h2, h3 {
     padding: 6px 0;
     color: var(--cor-texto);
     transition: color 0.25s ease;
+
+    font-size: 17px;
 }
 
 .links-navegacao a:hover {
+    transform: translateY(1px);
     color: var(--cor-dourado);
 }
 
 /*============================ Body > Main ============================*/
 
-.trilha-sonora{
-    font-family: var(--font-titulos);
-    font-size: 1.1rem;
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 30px;
+    max-width: 1300px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+
+.coluna-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.coluna-lateral-direita {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Trilha Sonora */
+
+.trilha-sonora {
+    background-color: var(--cor-painel);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    padding: 20px;
     text-align: center;
-}
-.trilha-sonora p {
     font-family: var(--font-textos);
-    padding-bottom: 5px;
 }
+
+.trilha-sonora h2 {
+    font-family: var(--font-titulos);
+    font-size: 2rem;
+    color: var(--cor-dourado);
+    margin-bottom: 8px;
+}
+
+.trilha-sonora p {
+    font-size: 1.1rem;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 15px;
+}
+
+/* Obras recentes */
 
 .obras-recentes {
-    font-family: var(--font-titulos);
-    font-size: 1.1rem;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    background-color: var(--cor-painel);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    padding: 20px;
     text-align: center;
 }
 
-/* .lista-obras {
+.obras-recentes h2 {
+    font-family: var(--font-titulos);
+    font-size: 2rem;
+    color: var(--cor-dourado);
+    margin-bottom: 20px;
+}
 
-} */
+.lista-obras {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
 
 .card-obra {
-    width: 250px;
-    height: auto;
+    width: 180px;
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
 }
-.card-obra img{
+
+.card-obra img {
     width: 100%;
     height: auto;
     display: block;
 }
 
+.card-obra h3 {
+    font-family: var(--font-textos);
+    font-size: 1rem;
+    padding: 12px 8px;
+    color: var(--cor-texto);
+}
+
+
+/* MENU CENTRAL */
+
+
+.menu-central {
+    background-color: var(--cor-painel);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    padding: 20px;
+    font-family: var(--font-textos);
+}
+
+.menu-central h2 {
+    font-family: var(--font-titulos);
+    font-size: 2rem;
+    color: var(--cor-dourado);
+    margin-bottom: 15px;
+}
+
+.menu-central p {
+    font-size: 0.8rem;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+/* SIDEBAR */
+
+.coluna-lateral-direita {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.bloco-sidebar {
+    background-color: var(--cor-painel);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    padding: 20px;
+    
+    font-family: var(--font-textos);
+}
+
+.bloco-sidebar h2 {
+    font-family: var(--font-titulos);
+    font-size: 1.3rem;
+
+    color: var(--cor-dourado);
+    
+    margin-bottom: 12px;
+}
+
+.bloco-sidebar p {
+    font-family: var(--font-textos);
+    font-size: 1.1rem;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 12px;
+}
+
+/* botão discord */
+.botao-sidebar {
+    background-color: var(--cor-dourado);
+    color: var(--cor-fundo);
+    display: inline-block;
+    padding: 7px 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.25s ease;
+
+    border: none;
+    border-radius: 5px;
+}
+
+.botao-sidebar:hover {
+    opacity: 0.8;
+}
+/*  */
+
+.conteudo-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.conteudo-lateral img {
+    width: 100%;
+    height: auto;
+    border-radius: 7px; 
+}
+
+
 /*============================ Body > Footer ============================*/
 
+
+
 footer {
+    background-color: var(--cor-painel);
+
     text-align: center;
-    border-top: 1.5px solid #ccc;
-    padding-top: 25px;  
-    padding-bottom: 25px; 
-    /* margin-top: 50px; */
+
+    padding: 25px 0;
+    border-top: 1px solid var(--cor-borda);
+
+    font-family: var(--font-textos);
+    font-size: 1rem;
+    color: var(--cor-texto);
 }   
 
+footer nav a {
+    display: inline-block;
+    margin: 0 15px;
+
+    color: var(--cor-texto-secundario);
+    transition: color 0.25s ease;
+}
+
+footer nav a:hover {
+    transform: translateY(1px);
+    color: var(--cor-dourado);
+}

@@ -5,65 +5,102 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-    <title>NomeLivro - 📚 PaperLog</title>
+    <title>NomeLivro • PaperLog</title>
 
-    <link rel="icon" type="image/png" href="assets/icons/">
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/paperlog_favicon.svg">
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="../assets/icons/paperlog_favicon.png">
 
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/modern-normalize.css" />
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body>
 
-    <header style="text-align: center;">
-        <br>
-        <nav>
-            <a href="index.html" target="_blank" rel="noopener noreferrer">Início</a>
-            <a href="" target="_blank" rel="noopener noreferrer">Minhas Leituras</a>
-            <a href="" target="_blank" rel="noopener noreferrer">Pesquisar</a>
-            <a href="" target="_blank" rel="noopener noreferrer">Fóruns</a>
-            </nav>
-        <br>
-        <hr>
-        <br>
+    <header>
     </header>
 
+    <nav class="barra-navegacao" id="nav-principal">
+      
+        <form class="barra-pesquisa" role="search" method="GET">
+
+        <label for="barra-pesquisa" class="texto-acessivel">
+            Pesquisar obras 
+        </label>
+
+        <span aria-hidden="true">🔎</span>
+
+        <input
+            type="search"
+            id="barra-pesquisa"
+            placeholder="Buscar obras, autores, tags..."  
+        >
+        </form>
+
+        <div class="links-navegacao">
+            <a href="index.html">
+                <span aria-hidden="true">🏠</span>
+                Início
+            </a>
+
+            <a href="/pages/bookPage.html">
+                <span aria-hidden="true">📚</span>
+                Biblioteca
+            </a>
+
+            <a href="/pages/pesquisar.html">
+                <span aria-hidden="true">🔎</span>
+                Pesquisar
+            </a>
+
+            <a href="/pages/foruns.html">
+                <span aria-hidden="true">💬</span>
+                Fóruns
+            </a>
+        </div>
+    </nav>
+
     <main>
-        <img src="../assets/images/ORV_Cover.jpg"
-        height="500"
-        alt="Capa do livro">
-
+        <div class="capa da obra">
+            <img src="../assets/images/ORV_Cover.jpg"
+            alt="Capa do livro">
+        </div>
+    
         <h3>Omniscient Reader's Viewpoint</h3>
-        <blockquote>
-            Dokja was an average office worker whose sole interest was reading his favorite web novel 'Three Ways to Survive the Apocalypse.' But when the novel suddenly becomes reality, he is the only person who knows how the world will end. Armed with this realization, Dokja uses his understanding to change the course of the story, and the world, as he knows it.
-        </blockquote>
 
-        <div style="text-align: center;">
-            <br>
-            <hr>
-            <br>
-            <!--Provavelmente vou ter que transformar em links para alterar a página-->
-            <p>Resumo</p>
-            <p>Autor</p>
-            <p>Personagens</p>
-            <p>Staff</p>
-            <p>Status</p>
-            <p>Reviews</p>
-            <!--Tudo acima-->
+        <div class="sinopse-obra">
+            <blockquote>
+                Dokja was an average office worker whose sole interest was reading his favorite web novel 'Three Ways to Survive the Apocalypse.' But when the novel suddenly becomes reality, he is the only person who knows how the world will end. Armed with this realization, Dokja uses his understanding to change the course of the story, and the world, as he knows it.
+            </blockquote>
         </div>
 
-        <video width="320" height="240" controls>
-            <source src="../assets/videos/catLaugh.mp4" type="video/mp4" >
-            Seu navegador não suporta a tag de video.
-        </video>
-    
+        <nav>
+            <div style="text-align: center;">
+                <!--Provavelmente vou ter que transformar em links para alterar a página-->
+                <p>Resumo</p>
+                <p>Autor</p>
+                <p>Personagens</p>
+                <p>Staff</p>
+                <p>Status</p>
+                <p>Reviews</p>
+                <!--Tudo acima-->
+            </div>
+        </nav>
+
+        <div clas="trailer-obra">
+            <video width="320" height="240" controls>
+                <source src="../assets/videos/catLaugh.mp4" type="video/mp4" >
+                Seu navegador não suporta a tag de video.
+            </video>
+        </div>
+            
     </main>
 
     <footer>
-        <nav style="text-align: center;">
+        <nav class="nav-footer" style="text-align: center;">
             <a href="" target="_blank" rel="noopener noreferrer">Sobre Nós</a>
             <a href="" target="_blank" rel="noopener noreferrer">Copyright</a>
-            <a href="https://www.goodreads.com" target="_blank" rel="noopener noreferrer">Explorar o Goodreads</a>
         </nav>
     </footer>
 

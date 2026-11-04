@@ -2,6 +2,12 @@
   Coisas para fazer no código:
 
   Alterar a ordem da logo e título do site com a barra de navegação, para que a barra de navegação fique acima da logo e do título.
+  OU  
+  Colocar uma imagem/algo de fundo na área do header, para que ele não fique tão estranho e sem graça.
+
+  PS.: colocar a adição dos arquivos das novas fonts na pasta de assets/fonts na hora de dar commit
+
+  envolver as tags de <img> com a tag de <a> para que a imagem seja clicável e leve para a página da obra, ou para a página de detalhes da obra.
 
 -->
 
@@ -13,9 +19,22 @@
 
     <title>Home • PaperLog</title>
 
-    <link rel="icon" type="image/svg+xml" href="assets/icons/paperlog_favicon.svg">
-    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" href="assets/icons/paperlog_favicon.png">
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="assets/icons/paperlog_favicon.svg"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/icons/favicon.ico"
+      sizes="any"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/icons/paperlog_favicon.png"
+    />
 
     <link rel="stylesheet" href="css/modern-normalize.css" />
     <link rel="stylesheet" href="css/variables.css" />
@@ -24,124 +43,185 @@
 
   <body>
     <header class="cabecalho" id="site-header">
-
       <div class="logo">
         <img
           src="assets/icons/PaperLog_Home_Logo.png"
           alt="Logo do site PaperLog"
-          >
+        />
         <div>
-          <h1><span style="text-align: center; font-size: 1.5rem;" >•</span> PaperLog</h1>
+          <h1>
+            <span style="text-align: center; font-size: 1.5rem">•</span>
+            PaperLog
+          </h1>
         </div>
       </div>
-          <p>Bem vindo ao PaperLog!</p>
-          <p id="descricaoHeader">
-            Um espaço pessoal para organizar leituras e registrar opiniões sobre
-            livros e suas adaptações.
-          </p>
-
+      <p>Bem vindo ao PaperLog!</p>
+      <p id="descricaoHeader">
+        Um espaço pessoal para organizar leituras e registrar opiniões sobre
+        livros e suas adaptações.
+      </p>
     </header>
 
     <nav class="barra-navegacao" id="nav-principal">
-      
-        <form class="barra-pesquisa" role="search" method="GET">
-
+      <form class="barra-pesquisa" role="search" method="GET">
         <label for="barra-pesquisa" class="texto-acessivel">
-            Pesquisar obras 
+          Pesquisar obras
         </label>
 
         <span aria-hidden="true">🔎</span>
 
         <input
-            type="search"
-            id="barra-pesquisa"
-            placeholder="Pesquisar..."  
-        >
-        </form>
+          type="search"
+          id="barra-pesquisa"
+          placeholder="Buscar obras, autores, tags..."
+        />
+      </form>
 
-        <div class="links-navegacao">
-            <a href="index.html">
-                <span aria-hidden="true">🏠</span>
-                Início
-            </a>
+      <div class="links-navegacao">
+        <a href="index.html">
+          <span aria-hidden="true">🏠</span>
+          Início
+        </a>
 
-            <a href="/pages/bookPage.html">
-                <span aria-hidden="true">📚</span>
-                Biblioteca
-            </a>
+        <a href="/pages/bookPage.html">
+          <span aria-hidden="true">📚</span>
+          Biblioteca
+        </a>
 
-            <a href="/pages/pesquisar.html">
-                <span aria-hidden="true">🔎</span>
-                Pesquisar
-            </a>
+        <a href="/pages/pesquisar.html">
+          <span aria-hidden="true">🔎</span>
+          Pesquisar
+        </a>
 
-            <a href="/pages/foruns.html">
-                <span aria-hidden="true">💬</span>
-                Fóruns
-            </a>
-        </div>
+        <a href="/pages/foruns.html">
+          <span aria-hidden="true">💬</span>
+          Fóruns
+        </a>
+      </div>
     </nav>
 
-    <main>
-      <section class="trilha-sonora">
-        <h3>Trilha Sonora</h3>
-        <p>Uma música para acompanhar suas leituras.</p>
-        <!-- Justificativa: preload="none" garante que o arquivo de áudio não consuma a franquia de dados do usuário antes que ele decida dar o play. -->
-        <audio controls preload="none">
-          <source
-            src="assets/audio/alex-morgan-coffee-shop-peaceful-afternoon-calm-573880.mp3"
-            type="audio/mpeg"
-          />
-          <source
-            src="assets/audio/alex-morgan-coffee-shop-peaceful-afternoon-calm-573880.wav"
-            type="audio/wav"
-          />
+    <main class="dashboard">
+
+      <!-- COLUNA PRINCIPAL (ESQUERDA) -->
+      <div class="coluna-principal">
+
+        <section class="trilha-sonora">
+          <h2>Trilha Sonora</h2>
+          <p>Uma música para acompanhar suas leituras.</p>
+          <!-- Justificativa: preload="none" garante que o arquivo de áudio não consuma a franquia de dados do usuário antes que ele decida dar o play. -->
+          <audio controls preload="none">
+            <source
+              src="assets/audio/alex-morgan-coffee-shop-peaceful-afternoon-calm-573880.mp3"
+              type="audio/mpeg"
+            />
+            <source
+              src="assets/audio/alex-morgan-coffee-shop-peaceful-afternoon-calm-573880.wav"
+              type="audio/wav"
+            />
+            <p>
+              Seu navegador não suporta o elemento de áudio.
+              <a
+                href="assets/audio/alex-morgan-coffee-shop-peaceful-afternoon-calm-573880.mp3"
+                >Baixe o arquivo de áudio</a
+              >.
+            </p>
+          </audio>
+        </section>
+
+        <section class="obras-recentes">
+          <h2>Obras Recentes</h2>
+
+          <div class="lista-obras">
+            <article class="card-obra">
+              <img
+                src="assets/images/ORV_Cover.jpg"
+                alt="Capa da obra Omniscient Reader's Viewpoint"
+              />
+
+              <h3>Omniscient Reader's Viewpoint</h3>
+            </article>
+
+            <article class="card-obra">
+              <img
+                src="assets/images/SSSCSH_Cover.jpg"
+                alt="Capa da obra SSS Class Suicidal Hunter"
+              />
+
+              <h3>SSS Class Suicidal Hunter</h3>
+            </article>
+
+            <article class="card-obra">
+              <img
+                src="assets/images/LOTM_Cover.jpg"
+                alt="Capa da obra Lord of the Mysteries"
+              />
+
+              <h3>Lord of the Mysteries</h3>
+            </article>
+          </div>
+        </section>
+
+        <section class="menu-central">
+          <h2>Menu Central</h2>
+
           <p>
-            Seu navegador não suporta o elemento de áudio.
-            <a
-              href="assets/audio/alex-morgan-coffee-shop-peaceful-afternoon-calm-573880.mp3"
-              >Baixe o arquivo de áudio</a
-            >.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+            officia modi doloremque quaerat rerum natus, consequatur laborum aut
+            cumque nisi, assumenda, eaque similique nulla maxime laboriosam at
+            quasi dolorum repudiandae.
           </p>
-        </audio>
-      </section>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+            officia modi doloremque quaerat rerum natus, consequatur laborum aut
+            cumque nisi, assumenda, eaque similique nulla maxime laboriosam at
+            quasi dolorum repudiandae.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+            officia modi doloremque quaerat rerum natus, consequatur laborum aut
+            cumque nisi, assumenda, eaque similique nulla maxime laboriosam at
+            quasi dolorum repudiandae.
+          </p>
+        </section>
 
-      <section class="obras-recentes">
-        <h2>Obras recentes</h2>
+      </div>
 
-        <div class="lista-obras">
-          <article class="card-obra">
-            <img
-              src="assets/images/ORV_Cover.jpg"
-              alt="Capa da obra Omniscient Reader's Viewpoint"
-            />
+      <!-- COLUNA LATERAL (DIREITA) -->
+      <aside class="coluna-lateral-direita">
 
-            <h3>Omniscient Reader's Viewpoint</h3>
-          </article>
-
-          <article class="card-obra">
-            <img
-              src="assets/images/SSSCSH_Cover.jpg"
-              alt="Capa da obra SSS Class Suicidal Hunter"
-            />
-
-            <h3>SSS Class Suicidal Hunter</h3>
-          </article>
-
-          <article class="card-obra">
-            <img
-              src="assets/images/LOTM_Cover.jpg"
-              alt="Capa da obra Lord of the Mysteries"
-            />
-
-            <h3>Lord of the Mysteries</h3>
-          </article>
+        <div class="bloco-sidebar">
+          <h2>Últimas atualizações</h2>
+          <p>versão 0.1</p>
+          <p><small>adicionado não sei o que</small></p> <!-- remover dps -->
         </div>
-      </section>
+
+        <div class="bloco-sidebar">
+          <h2>Faça parte da comunidade!</h2>
+          <a class="botao-sidebar"
+            href="index.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Discord
+          </a>
+        </div>
+
+        <div class="bloco-sidebar">
+          <h2 style="text-align: center;">Carrossel Lateral</h2>
+          <div class="conteudo-lateral">
+            <img src="assets/images/SSSCSH_Cover.jpg" alt="teste de imagem" />
+
+            <img src="assets/images/ORV_Cover.jpg" alt="teste de imagem" />
+
+            <img src="assets/images/LOTM_Cover.jpg" alt="teste de imagem" />
+          </div>
+        </div>
+
+      </aside>
+
     </main>
 
     <footer>
-      <nav style="text-align: center">
+      <nav class="nav-footer">
         <a href="" target="_blank" rel="noopener noreferrer">Sobre Nós</a>
         <a href="" target="_blank" rel="noopener noreferrer">Copyright</a>
         <a
